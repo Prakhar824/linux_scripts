@@ -1,22 +1,21 @@
 pipeline {
-  agent {
-    label 'master'
-  }
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Hello'
-      }
-    }
-    stage('Test') {
-      post {
-        always {
-          echo 'hi'
+    agent any
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
         }
-
-      }
-     
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-  }
 }
