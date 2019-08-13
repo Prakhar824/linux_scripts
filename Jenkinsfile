@@ -11,13 +11,13 @@ pipeline {
     stage('Test') {
       post {
         always {
-          echo 'mvn test'
+          echo 'hi'
 
         }
 
       }
       steps {
-        echo 'mvn test'
+        echo 'bye'
       }
     }
   }
