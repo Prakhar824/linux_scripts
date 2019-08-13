@@ -16,9 +16,7 @@ pipeline {
         }
 
       }
-      steps {
-        echo 'bye'
-      }
+     
     }
   }
 }
